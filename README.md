@@ -1,4 +1,4 @@
-# Recipe Book Project - Next update pushed
+# Recipe Book Project 
 
 The intent of the project is to allow developers to build and deploy an application for 
 recipe collection that can be printed as a fun team building project.  Originally built 
