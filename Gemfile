@@ -25,7 +25,9 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  gem "sqlite3", "1.4.2"
+  #gem "sqlite3", "1.4.2"
+  # Use mysql as the database for Active Record
+  gem "mysql2", "~> 0.5"
   gem "debug", platforms: %i[ mri windows ]
 
 end
