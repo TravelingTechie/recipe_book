@@ -63,4 +63,14 @@ class UserTest < ActiveSupport::TestCase
   test "authenticated? should return false for a user with nil digest" do
     assert_not @user.authenticated?(:remember, '')
   end
+
+  test "associated recipes should be destroyed" do
+    @user.save
+    @user.recipes.create!( title: "Test Recipe",
+                          content:"Ingredient 1, Ingredient 2" ,
+                          category:"Dessert")
+    assert_difference 'Recipe.count', -1 do
+      @user.destroy
+    end
+  end
 end

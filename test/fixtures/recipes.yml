@@ -3,10 +3,19 @@ one:
   title: "Test Recipe "
   content: "Really struggling to get full test suite to run"
   category: "Main Dish"
+  created_at: <%= 1.day.ago %>
   user: celeste
 
 two:
   title: "Test Recipe Heidi "
   content: "Really struggling to get full test suite to run"
   category: "Main Dish"
+  created_at: <%= 20.minutes.ago %>
+  user: celeste
+
+most_recent:
+  title: "Test Recipe Most Recent"
+  content: "Really struggling to get full test suite to run"
+  category: "Main Dish"
+  created_at: <%= Time.zone.now %>
   user: celeste

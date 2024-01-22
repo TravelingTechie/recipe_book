@@ -18,3 +18,15 @@ User.create!(name:  "Example User",
                activated: true,
                activated_at: Time.zone.now)
 end
+
+# Generate microposts for a subset of users.
+users = User.order(:created_at).take(8)
+
+3.times do
+  title = Faker::Lorem.sentence(word_count: 2)
+  content = Faker::Lorem.sentence(word_count: 5)
+  category = "Main Dish"
+  users.each { |user| user.recipes.create!(title: title,
+                                          content: content, 
+                                          category: category) }
+end
