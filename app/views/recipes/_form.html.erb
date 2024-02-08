@@ -1,11 +1,12 @@
-    <%= form_with(model: @user) do |form| %>
-      <%= render 'shared/error_messages' %>
-      
-      <%= form.label :title %>
-      <%= form.text_field :title, class: 'form-control' %>
-      
-      <%= form.label :content, "Content" %>
-      <%= form.text_field :econtent, class: 'form-control' %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      </aside>
+      <section class="recipe_form">
+        <p>There is a 5 recipe limit so pick your favorites</p>
+        <%= render 'recipe_form' %>
+      </section>
 
-      <%= form.submit yield(:button_text), class: "btn btn-primary" %>
-    <% end %>
+  </div>

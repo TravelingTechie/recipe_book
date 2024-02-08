@@ -12,6 +12,7 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     assert_select 'h1>img.gravatar'
     assert_match @user.recipes.count.to_s, response.body
     @user.recipes.each do |recipe|
+      assert_match recipe.title, response.body 
       assert_match recipe.content, response.body 
     end
   end

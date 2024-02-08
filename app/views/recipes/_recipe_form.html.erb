@@ -1,0 +1,18 @@
+<%= form_with(model: @recipe) do |form| %>
+  <%= render 'shared/error_messages', object: form.object %>
+  <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title, class: 'form-control' %>
+      
+      <%= form.label :content, "Content" %>
+      <%= form.text_area :content, placeholder: "Compose new recipe..." %>
+
+      <%= form.label :category %>
+      <% if @categories.present? %>
+          <%= form.select :category, options_for_select(@categories.map { |category| [category['category'], category['category']] }), {}, class: 'form-control' %>
+      <% else %>
+        <p>No categories found</p>
+      <% end %>
+  </div>
+  <%= form.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

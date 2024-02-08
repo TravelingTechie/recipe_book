@@ -2,7 +2,7 @@
   <td><%= gravatar_for user, size: 50 %></td>
   <td><%= link_to user.name, user %> </td>
   <td><%= user.updated_at.strftime('%m/%d/%Y') %></td>
-  <td>Recipe submitted</td>
+  <td><%= user.recipes.count %></td>
   <% if current_user.admin? %>
     <td>
       <% if user.activated? && !current_user?(user) %>
