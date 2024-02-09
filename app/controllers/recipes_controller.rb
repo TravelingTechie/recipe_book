@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :logged_in_user, only: [:create,:edit, :update, :destroy]
-  before_action :correct_user,   only: [:edit, :update, :destroy]
+  before_action :correct_user,   only: [:show, :edit, :update, :destroy]
 
   def new
     # if user has 5 or more recipes, I want to redirect to home with a flash message
@@ -48,6 +48,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    categories
   end
 
   def destroy
