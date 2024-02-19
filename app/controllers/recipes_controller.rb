@@ -48,6 +48,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    categories
   end
 
   def destroy
