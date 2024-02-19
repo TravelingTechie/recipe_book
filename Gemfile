@@ -20,7 +20,6 @@ gem "puma",                       "5.6.4"
 gem "bootsnap",                   "1.12.0", require: false
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
-gem 'tinymce-rails'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
