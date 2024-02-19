@@ -16,11 +16,14 @@ gem "importmap-rails",            "1.1.0"
 gem "turbo-rails",                "1.1.1"
 gem "stimulus-rails",             "1.0.4"
 gem "jbuilder",                   "2.11.5"
-gem "puma",                       "5.6.4"
+gem "puma",                       "5.6.8"
 gem "bootsnap",                   "1.12.0", require: false
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem 'tinymce-rails'
+gem "activerecord", ">= 7.0.4.1"
+
+
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
